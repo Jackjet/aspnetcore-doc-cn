@@ -1,5 +1,5 @@
 ---
-title: Introduction to ASP.NET Core | Microsoft Docs
+title: ASP.NET Core 介绍 | Microsoft Docs
 author: rick-anderson
 description: 
 keywords: ASP.NET Core,
@@ -12,71 +12,72 @@ ms.technology: aspnet
 ms.prod: asp.net-core
 uid: index
 ---
-# Introduction to ASP.NET Core
+# ASP.NET Core 介绍
 
-By [Daniel Roth](https://github.com/danroth27), [Rick Anderson](https://twitter.com/RickAndMSFT), and [Shaun Luttin](https://twitter.com/dicshaunary)
+编写：[Daniel Roth](https://github.com/danroth27)、[Rick Anderson](https://twitter.com/RickAndMSFT)、[Shaun Luttin](https://twitter.com/dicshaunary)
+翻译：[江振宇(Kerry Jiang)](http://github.com/kerryjiang)、[刘怡(AlexLEWIS)](http://github.com/alexinea)（修订）
 
-ASP.NET Core is a significant redesign of ASP.NET. This topic introduces the new concepts in ASP.NET Core and explains how they help you develop modern web apps.  
+ASP.NET Core 是对 ASP.NET 的一次意义重大的重新设计。本文介绍了 ASP.NET Core 中的一些新概念，并解释了它们如何帮助你开发现代的 Web 应用程序。
 
-## What is ASP.NET Core?
+## 什么是 ASP.NET Core？
 
-ASP.NET Core is a new open-source and cross-platform framework for building modern cloud based internet connected applications, such as web apps, IoT apps and mobile backends. ASP.NET Core apps can run on [.NET Core](https://www.microsoft.com/net/core/platform) or on the full .NET Framework. It was architected to provide an optimized development framework for apps that are deployed to the cloud or run on-premises. It consists of modular components with minimal overhead, so you retain flexibility while constructing your solutions. You can develop and run your ASP.NET Core apps cross-platform on Windows, Mac and Linux. ASP.NET Core is open source at [GitHub](https://github.com/aspnet/home).
+ASP.NET Core 是一个新的开源和跨平台的框架，用于构建如 Web 应用、物联网（IoT）应用和移动后端应用等连接到互联网的基于云的现代应用程序。ASP.NET Core 应用可运行于 [.NET Core](https://www.microsoft.com/net/core/platform) 和完整的 .NET Framework 之上。 构建它的目的是为那些部署在云端或者内部运行（on-premises）的应用提供一个优化的开发框架。它由最小开销的模块化的组件构成，因此在构建你的解决方案的同时可以保持灵活性。你可以在 Windows、Mac 和 Linux 上跨平台的开发和运行你的 ASP.NET Core 应用。 ASP.NET Core 开源在 [GitHub](https://github.com/aspnet/home) 上。
 
-## Why build ASP.NET Core?
+## 为什么构建 ASP.NET Core？
 
-The first preview release of ASP.NET came out almost 15 years ago as part of the .NET Framework.  Since then millions of developers have used it to build and run great web apps, and over the years we have added and evolved many capabilities to it.
+ASP.NET 的首个预览版作为 .NET Framework 的一部分发布于15年前。自那以后数百万的开发者用它开发和运行着众多非常棒的 Web 应用，而且在这么多年之间我们也为它增加和改进了很多的功能。
 
-ASP.NET Core has a number of architectural changes that result in a much leaner and modular framework.  ASP.NET Core is no longer based on *System.Web.dll*. It is based on a set of granular and well factored [NuGet](http://www.nuget.org/) packages. This allows you to optimize your app to include just the NuGet packages you need. The benefits of a smaller app surface area include tighter security, reduced servicing, improved performance, and decreased costs in a pay-for-what-you-use model.
+ASP.NET Core 有一些架构上的改变，这些改变会使它成为一个更为精简并且模块化的框架。ASP.NET Core 不再基于 *System.Web.dll*。当前它基于一系列颗粒化的，并且良好构建的 [NuGet](http://www.nuget.org/) 包。这一特点能够让你通过仅仅包含需要的 NuGet 包的方法来优化你的应用。一个更小的应用程序接口通过“按需使用（pay-for-what-you-use）”的模型获得的好处包括更可靠的安全性、简化服务、改进性能和减少成本。
 
-With ASP.NET Core you gain the following foundational improvements:
+通过 ASP.NET Core，你可以获得的改进：
 
-* A unified story for building web UI and web APIs
+* 一个用于构建 web UI 和 web APIs 的统一的方式
 
-* Integration of [modern client-side frameworks](client-side/index.md) and development workflows
+* 集成[现代的客户端侧开发框架](client-side/index.md)和开发流程
 
-* A cloud-ready environment-based [configuration system](fundamentals/configuration.md)
+* 一个适用于云的,基于环境的[配置系统](fundamentals/configuration.md)
 
-* Built-in [dependency injection](fundamentals/dependency-injection.md)
+* 内置的[依赖注入](fundamentals/dependency-injection.md)
 
-* New light-weight and modular HTTP request pipeline
+* 新型的轻量级的、模块化 HTTP 请求管道
 
-* Ability to host on IIS or self-host in your own process
+* 运行于 IIS 或者自宿主（self-host）于你自己的进程的能力
 
-* Built on [.NET Core](https://microsoft.com/net/core), which supports true side-by-side app versioning
+* 基于支持真正的 side-by-side 应用程序版本化的 [.NET Core](https://microsoft.com/net/core) 构建
 
-* Ships entirely as [NuGet](https://nuget.org)  packages
+* 完全以 [NuGet](https://nuget.org) 包的形式发布
 
-* New tooling that simplifies modern web development
+* 新的用于简化现代 web 开发的工具
 
-* Build and run cross-platform ASP.NET apps on Windows, Mac and Linux
+* 可以在 Windows 、Mac 和 Linux 上构建和运行跨平台的 ASP.NET 应用
 
-* Open source and community focused
+* 开源并重视社区
 
-## Build web UI and web APIs using ASP.NET Core MVC
+## 使用 ASP.NET Core MVC 构建 web UI 和 web APIs
 
-* You can create well-factored and testable web apps that follow the Model-View-Controller (MVC) pattern. See [MVC](mvc/index.md) and [Testing](testing/index.md).
+* 你可以使用 Model-View-Controller（MVC）模式创建优秀的并且可测试的 web 应用程序。查看 [MVC](mvc/index.md) 和[测试](testing/index.md).
 
-* You can build HTTP services that support multiple formats and have full support for content negotiation. See [Formatting Response Data](mvc/models/formatting.md)
+* 你可以构建支持多种格式并且完全支持内容协商的 HTTP 服务。查看[格式化响应数据](mvc/models/formatting.md)
 
-* [Razor](http://www.asp.net/web-pages/overview/getting-started/introducing-razor-syntax-c) provides a productive language to create [Views](mvc/views/index.md)
+* [Razor](http://www.asp.net/web-pages/overview/getting-started/introducing-razor-syntax-c) 提供了一种高效的语言用于创建 [Views](mvc/views/index.md)
 
-* [Tag Helpers](mvc/views/tag-helpers/intro.md) enable server-side code to participate in creating and rendering HTML elements in Razor files
+* [Tag Helpers](mvc/views/tag-helpers/intro.md) 启用服务器端的代码参与到 Razor 文件的创建和 HTML 元素渲染
 
-* You can create HTTP services with full support for content negotiation using custom or built-in formatters (JSON, XML)
+* 你可以使用自定义或者内置的 formatters （JSON， XML）来构建完全支持内容协商的 HTTP 服务
 
-* [Model Binding](mvc/models/model-binding.md) automatically maps data from HTTP requests to action method parameters
+* [Model Binding](mvc/models/model-binding.md) 自动的映射 HTTP 请求中的数据到 action 方法参数
 
-* [Model Validation](mvc/models/validation.md) automatically performs client and server side validation
+* [Model Validation](mvc/models/validation.md) 自动的执行客户端和服务器端验证
 
-## Client-side development
+## 客户端侧开发
 
-ASP.NET Core is designed to integrate seamlessly with a variety of client-side frameworks, including [AngularJS](client-side/angular.md), [KnockoutJS](client-side/knockout.md) and [Bootstrap](client-side/bootstrap.md). See [Client-Side Development](client-side/index.md) for more details.
+ASP.NET Core 在设计时已考虑到和各种客户端框架的无缝集成，包括 [AngularJS](client-side/angular.md)、[KnockoutJS](client-side/knockout.md) 以及 [Bootstrap](client-side/bootstrap.md)。查看 [客户端侧开发](client-side/index.md)获取更多信息。
 
-## Next steps
+## 下一步
 
-For getting-started tutorials, see [ASP.NET Core Tutorials](tutorials/index.md)
+入门指南，查看 [ASP.NET Core 指南](tutorials/index.md)
 
-For in-depth introduction to ASP.NET Core concepts and architecture, see [ASP.NET Core Fundamentals](fundamentals/index.md).
+进一步 介绍ASP.NET Core 的原理与架构，查看 [ASP.NET Core 基本原理](fundamentals/index.md)。
 
-An ASP.NET Core app can use the .NET Core or .NET Framework runtime. For more information, see [Choosing between .NET Core and .NET Framework](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server).
+ASP.NET Core 应用可使用 .NET Core 运行时或 .NET Framework 运行时。更多信息浏览 [在 .NET Core 与 .NET Framework 间选择](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server)。
 
