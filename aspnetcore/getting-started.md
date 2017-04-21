@@ -14,6 +14,8 @@ uid: getting-started
 ---
 # ASP.NET Core 入门
 
+翻译：[娄宇(Lyrics)](http://github.com/xbuilder)、[刘怡(AlexLEWIS)](http://github.com/alexinea)
+
 1.  安装 [.NET Core](https://microsoft.com/net/core)
 
 2.  创建一个新的 .NET Core 项目：
