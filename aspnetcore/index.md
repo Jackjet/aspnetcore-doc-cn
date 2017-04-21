@@ -66,9 +66,9 @@ ASP.NET Core 有一些架构上的改变，这些改变会使它成为一个更�
 
 * 你可以使用自定义或者内置的 formatters （JSON， XML）来构建完全支持内容协商的 HTTP 服务
 
-* [Model Binding](mvc/models/model-binding.md) 自动的映射 HTTP 请求中的数据到 action 方法参数
+* [模型绑定](mvc/models/model-binding.md) 自动的映射 HTTP 请求中的数据到动作（Action）方法参数
 
-* [Model Validation](mvc/models/validation.md) 自动的执行客户端和服务器端验证
+* [模型验证](mvc/models/validation.md) 自动的执行客户端和服务器端验证
 
 ## 客户端侧开发
 
