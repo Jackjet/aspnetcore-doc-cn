@@ -1,5 +1,5 @@
 ---
-title: What's new in ASP.NET Core 1.1 | Microsoft Docs
+title: ASP.NET Core 1.1 更新记录 | Microsoft Docs
 author: rick-anderson
 description: What's new in ASP.NET Core 1.1
 keywords: ASP.NET Core, bower
@@ -13,25 +13,27 @@ ms.prod: aspnet-core
 uid: aspnetcore-1.1
 ---
 
-# What's new in ASP.NET Core 1.1
+# ASP.NET Core 1.1 更新记录
 
-ASP.NET Core 1.1 includes the following new features:
+翻译：[刘怡(AlexLEWIS)](http://github.com/alexinea)
 
-- [URL Rewriting Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting)
-- [Response Caching Middleware](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/middleware)
-- [View Components as Tag Helpers](xref:mvc/views/view-components#invoking-a-view-component-as-a-tag-helper)
-- [Middleware as MVC filters](xref:mvc/controllers/filters#using-middleware-in-the-filter-pipeline)
-- [Cookie-based TempData provider](xref:fundamentals/app-state#cookie-based-tempdata-provider )
-- [Azure App Service logging provider](xref:fundamentals/logging#appservice)
-- [Azure Key Vault configuration provider](xref:security/key-vault-configuration)
-- [Azure and Redis Storage Data Protection Key Repositories](xref:security/data-protection/implementation/key-storage-providers#azure-and-redis)
+ASP.NET Core 1.1 包含以下新特性：
+
+- [URL 重写中间件](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/url-rewriting)
+- [响应缓存中间件](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/middleware)
+- [将视图组件作为 Tag Helpers](xref:mvc/views/view-components#invoking-a-view-component-as-a-tag-helper)
+- [将中间件作为 MVC 过滤器](xref:mvc/controllers/filters#using-middleware-in-the-filter-pipeline)
+- [基于 Cookie 的 TempData 提供者程序](xref:fundamentals/app-state#cookie-based-tempdata-provider )
+- [Azure App Service 日志提供者程序](xref:fundamentals/logging#appservice)
+- [Azure Key Vault 配置提供者程序](xref:security/key-vault-configuration)
+- [Azure 与 Redis 存储数据保护 Key 仓库](xref:security/data-protection/implementation/key-storage-providers#azure-and-redis)
 - [WebListener Server for Windows](xref:fundamentals/servers/weblistener)
-- [WebSockets support](xref:fundamentals/websockets)
+- [支持 WebSockets](xref:fundamentals/websockets)
 
-## Choosing between versions 1.0 and 1.1 of ASP.NET Core
+## 在 ASP.NET Core 1.0 和 1.1 之间做出选择
 
-ASP.NET Core 1.1 has more features than 1.0. In general, we recommend you use the latest version.
+ASP.NET Core 1.1 相对于 1.0 多了很多特性。一般来讲，我们推荐使用最新版本。
 
-## Additional Information
+## 更多信息
 
-- [ASP.NET Core 1.1.0 Release Notes](https://github.com/aspnet/Home/releases/tag/1.1.0)
+- [ASP.NET Core 1.1.0 发布记录](https://github.com/aspnet/Home/releases/tag/1.1.0)
