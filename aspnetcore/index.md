@@ -15,6 +15,7 @@ uid: index
 # ASP.NET Core 介绍
 
 编写：[Daniel Roth](https://github.com/danroth27)、[Rick Anderson](https://twitter.com/RickAndMSFT)、[Shaun Luttin](https://twitter.com/dicshaunary)
+
 翻译：[江振宇(Kerry Jiang)](http://github.com/kerryjiang)、[刘怡(AlexLEWIS)](http://github.com/alexinea)（修订）
 
 ASP.NET Core 是对 ASP.NET 的一次意义重大的重新设计。本文介绍了 ASP.NET Core 中的一些新概念，并解释了它们如何帮助你开发现代的 Web 应用程序。
