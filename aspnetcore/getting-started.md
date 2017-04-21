@@ -14,7 +14,7 @@ uid: getting-started
 ---
 # ASP.NET Core 入门
 
-翻译：[娄宇(Lyrics)](http://github.com/xbuilder)、[刘怡(AlexLEWIS)](http://github.com/alexinea)
+翻译：[娄宇(Lyrics)](http://github.com/xbuilder)、[刘怡(AlexLEWIS)](http://github.com/alexinea)（修订）
 
 1.  安装 [.NET Core](https://microsoft.com/net/core)
 
@@ -50,4 +50,4 @@ uid: getting-started
 
 可以在 [ASP.NET Core 介绍](index.md) 和 [ASP.NET Core 基本原理](fundamentals/index.md) 了解 ASP.NET Core 的原理与架构。
 
-ASP.NET Core 应用可使用 .NET Core 运行时或 .NET Framework 运行时。更多信息浏览 [在 .NET Core 与 .NET Framework 间选择](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server).
+ASP.NET Core 应用可使用 .NET Core 运行时或 .NET Framework 运行时。更多信息浏览 [在 .NET Core 与 .NET Framework 间选择](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server)。
