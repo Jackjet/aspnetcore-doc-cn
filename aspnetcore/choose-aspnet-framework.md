@@ -1,7 +1,7 @@
 ---
-title: "Choose between ASP.NET and ASP.NET Core | Microsoft Docs"
+title: "在 ASP.NET 和 ASP.NET Core 之间选择 | Microsoft Docs"
 author: rick-anderson
-description: "How to choose between ASP.NET and ASP.NET Core."
+description: 如何在 ASP.NET 和 ASP.NET Core 之间选择。"
 ms.author: aspnetcontent
 manager: wpickett
 ms.date: 03/12/2010
@@ -13,42 +13,44 @@ msc.legacyurl: /learn
 msc.type: content
 ---
 
-# Choose between ASP.NET and ASP.NET Core 
+# 在 ASP.NET 和 ASP.NET Core 之间选择
 
-No matter the web application you are creating, ASP.NET has a solution for you: from enterprise web applications targeting Windows Server, to small microservices targeting Linux containers, and everything in between.
+翻译：[刘怡(AlexLEWIS)](http://github.com/alexinea)
+
+不要怀疑你所创建的网络应用程序，ASP.NET 为你提供了解决方案：从针对 Windows Server 的企业网络应用到针对 Linnux 容器的小型微服务，以及两者间的任何事物。
 
 ## ASP.NET Core
 
-ASP.NET Core is a new open-source and cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.
+ASP.NET Core 是新的开源、跨平台的 .NET Framework，可用于在 Windows 或 Linux 上构建现代的基于云的网络应用程序。
 
 ## ASP.NET
 
-ASP.NET is a mature web platform that provides all the services that you require to build enterprise-class server-based web applications using .NET on Windows.
+ASP.NET 是成熟的 Web 平台，提供了所有你需要的用于在 Windows 上使用 .NET 构建企业级基于服务器的网络应用的所有服务。
 
-## Which one is right for me?
+## 哪个更适合我？
 
 | ASP.NET Core | ASP.NET |
 |---|---|
-|Build for Windows, Mac, or Linux|Build for Windows|
-|Use [MVC](mvc/overview.md), or [Web API](tutorials/first-web-api.md)|Use [Web Forms](https://docs.microsoft.com/aspnet/web-forms), [SignalR](https://docs.microsoft.com/aspnet/signalr), [MVC](https://docs.microsoft.com/aspnet/mvc), [Web API](https://docs.microsoft.com/en-us/aspnet/web-api/), or [Web Pages](https://docs.microsoft.com/aspnet/web-pages)|
-|Multiple versions per machine|One version per machine|
-|Develop with Visual Studio or Visual Studio Code using C#|Develop with Visual Studio using C#, VB or F#|
-|New platform|Mature platform|
-|Ultra performance|High performance|
-|[Choose .NET Framework or .NET Core runtime](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server)|Use .NET Framework runtime|
+|为 Windows、macOS 或 Linux 构建|仅为 Windows 构建|
+|使用 [MVC](mvc/overview.md) 或 [Web API](tutorials/first-web-api.md)|使用 [Web Forms](https://docs.microsoft.com/aspnet/web-forms)、[SignalR](https://docs.microsoft.com/aspnet/signalr)、[MVC](https://docs.microsoft.com/aspnet/mvc)、[Web API](https://docs.microsoft.com/en-us/aspnet/web-api/) 或 [Web Pages](https://docs.microsoft.com/aspnet/web-pages)|
+|单一机器支持多个版本|一台机器只支持一个版本|
+|在 Visual Studio 或 Visual Studio Code 上使用 C# 开发|在 Visual Studio 上使用 C#、VB 或 F# 开发|
+|新平台|成熟平台|
+|极致性能|高性能|
+|[选择 .NET Framework 或 .NET Core 运行时](https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server)|使用 .NET Framework 运行时|
 
-## ASP.NET Core scenarios
+## ASP.NET Core 方案
 
-* [Websites](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/)
-* [APIs](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api)
+* [网站](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/)
+* [接口](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api)
 
-## ASP.NET scenarios
+## ASP.NET 方案
 
-* [Websites](https://docs.microsoft.com/aspnet/mvc)
-* [APIs](https://docs.microsoft.com/aspnet/web-api)
-* [Real-time](https://docs.microsoft.com/aspnet/signalr)
+* [网站](https://docs.microsoft.com/aspnet/mvc)
+* [接口](https://docs.microsoft.com/aspnet/web-api)
+* [实时](https://docs.microsoft.com/aspnet/signalr)
 
-## Resources
+## 资源
 
-* [Introduction to ASP.NET](https://docs.microsoft.com/aspnet/overview)
-* [Introduction to ASP.NET Core](index.md)
+* [ASP.NET 介绍](https://docs.microsoft.com/aspnet/overview)
+* [ASP.NET Core 介绍](index.md)
