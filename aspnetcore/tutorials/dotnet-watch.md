@@ -1,5 +1,5 @@
 ---
-title: Developing ASP.NET Core apps using dotnet watch | Microsoft Docs
+title: 使用 dotnet watch 开发 ASP.NET Core 应用程序 | Microsoft Docs
 author: rick-anderson
 description: Shows how to use dotnet watch.
 keywords: ASP.NET Core, using dotnet watch
@@ -12,23 +12,25 @@ ms.technology: aspnet
 ms.prod: asp.net-core
 uid: tutorials/dotnet-watch
 ---
-# Developing ASP.NET Core apps using dotnet watch
+# 使用 dotnet watch 开发 ASP.NET Core 应用程序
 
 
-By [Rick Anderson](https://twitter.com/RickAndMSFT) and [Victor Hurdugaci](https://twitter.com/victorhurdugaci)
+编写：[Rick Anderson](https://twitter.com/RickAndMSFT) 和 [Victor Hurdugaci](https://twitter.com/victorhurdugaci)
 
-`dotnet watch` is a tool that runs a `dotnet` command when source files change. For example, a file change can trigger compilation, tests, or deployment.
+翻译：[谢炀（Kiler）](https://github.com/kiler398/aspnetcore)、[刘怡(AlexLEWIS)](http://github.com/alexinea)
 
-In this tutorial we use an existing Web API app with two endpoints: one that returns a sum and one that returns a product. The product method contains a bug that we'll fix as part of this tutorial.
+`dotnet watch` 是一个在源文件发生变动的情况下使用 `dotnet` 命令的工具。 例如，当一个文件变化时，会触发编译、测试或发布操作。
 
-Download the [sample app](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/dotnet-watch/sample). It contains two projects, `WebApp` (a web app) and `WebAppTests` (unit tests for the web app).
+在本教程中，我们使用一个已存在的带两个端点的 Web API：一个返回两数之和，一个返回两数之积。其中 product 方法故意包含一个错误，作为本教程的一部分我们会修复它。 
 
-In a console, navigate to the WebApp folder and run the following commands:
+下载[示例](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/dotnet-watch/sample)。 它包含两个项目，`WebApp`（一个新的 Web 应用程序）和 `WebAppTests`（Web 应用程序配套的单元测试项目）。
+
+在命令控制台程序中导航到 WebApp 所在的文件夹，然后运行以下命令：
 
 - `dotnet restore`
 - `dotnet run`
 
-The console output will show messages similar to the following (indicating that the app is running and waiting for requests):
+在 console 中输出的信息如下（表明该应用程序正在运行并等待请求）：
 
 ```console
 $ dotnet run
@@ -38,67 +40,68 @@ Now listening on: http://localhost:5000
 Application started. Press Ctrl+C to shut down.
 ```
 
-In a web browser, navigate to `http://localhost:5000/api/math/sum?a=4&b=5`, you should see the result `9`.
+在 Web 浏览器中，导航到 `http://localhost:5000/api/math/sum?a=4&b=5` 页面你会看到结果 `9` 。
 
-Navigate to the product API (`http://localhost:5000/api/math/product?a=4&b=5`), it returns `9`, not `20` as you'd expect. We'll fix that later in the tutorial.
+如果你访问乘法接口 `http://localhost:5000/api/math/product?a=4&b=5`，你期望得到结果 `20`，但是实际上还是返回了 `9`。我们后面会修复它。
 
-## Add `dotnet watch` to a project
+## 项目中添加 `dotnet watch`
 
-- Add `Microsoft.DotNet.Watcher.Tools` to the *.csproj* file:
+- 在 *.csproj* 文件中添加 `Microsoft.DotNet.Watcher.Tools`：
  ```xml
  <ItemGroup>
    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
  </ItemGroup> 
  ```
 
-- Run `dotnet restore`.
+- 运行 `dotnet restore`.
 
-## Running `dotnet` commands using `dotnet watch`
+## 使用 `dotnet watch` 运行 `dotnet` 命令
 
-Any `dotnet` command can be run with `dotnet watch`, for example:
+任何 `dotnet` 命令都可以以 `dotnet watch` 这样的方式运行，例如：
 
-| Command | Command with watch |
+| 命令 | 带 watch 的命令 |
 | ---- | ----- |
 | dotnet run | dotnet watch run |
 | dotnet run -f net451 | dotnet watch run -f net451 |
 | dotnet run -f net451 -- --arg1 | dotnet watch run -f net451 -- --arg1 |
 | dotnet test | dotnet watch test |
 
-Run `dotnet watch run` in the `WebApp` folder. The console output will indicate `watch` has started.
+在 `WebApp` 文件夹中运行 `dotnet watch run`。控制台的输出信息表明 `watch` 开始生效。
 
-## Making changes with `dotnet watch`
+## 在 `dotnet watch` 模式中修改
 
-Make sure `dotnet watch` is running.
+确认 `dotnet watch` 模式运行中。
 
-Fix the bug in the `Product` method of the `MathController` so it returns the product and not the sum.
+修复 `MathController` 的 `Product` 方法，这样它就返回两数之积而非两数之和。
 
 ```csharp
 public static int Product(int a, int b)
 {
   return a * b;
-} ```
+} 
+```
 
-Save the file. The console output will show messages indicating that `dotnet watch` detected a file change and restarted the app.
+保存文件。控制台会输出消息以表明 `dotnet watch` 检测到文件的变化并重启应用程序。
 
-Verify `http://localhost:5000/api/math/product?a=4&b=5` returns the correct result.
+验证 `http://localhost:5000/api/math/product?a=4&b=5` 返回正确结果。
 
-## Running tests using `dotnet watch`
+## 使用 `dotnet watch` 运行单元测试
 
-- Change the `Product` method of the `MathController` back to returning the sum and save the file.
-- In a command window, naviagate to the `WebAppTests` folder.
-- Run `dotnet restore`
-- Run `dotnet watch test`. You see output indicating that a test failed and that watcher is waiting for file changes:
+- 把 `MathController` 的 `Product` 方法重新变为两数之和，然后保存文件。
+- 在命令行窗口中，导航到 `WebAppTests` 文件夹。
+- 运行 `dotnet restore`
+- 运行 `dotnet watch test`。 你会看到输出信息显示测试失败，同时监视器等待着文件变更：
 
  ```console
  Total tests: 2. Passed: 1. Failed: 1. Skipped: 0.
  Test Run Failed.
   ```
-- Fix the `Product` method code so it returns the product. Save the file.
+- 修正 `Product` 方法的代码，让它返回两数之积，然后保存文件。
 
-`dotnet watch` detects the file change and reruns the tests. The console output will show the tests passed.
+`dotnet watch` 检测到文件变更后重新运行测试。控制台输出显示测试通过。
 
-## dotnet-watch in GitHub
+## GitHub 中的 dotnet-watch
 
-dotnet-watch is part of the GitHub [DotNetTools repository](https://github.com/aspnet/DotNetTools/tree/dev/src/Microsoft.DotNet.Watcher.Tools).
+dotnet-watch 是 GitHub [DotNetTools 仓库](https://github.com/aspnet/DotNetTools/tree/dev/src/Microsoft.DotNet.Watcher.Tools)的一部分。
 
-The [MSBuild section](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md#msbuild) of the [dotnet-watch ReadMe](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md) explains how dotnet-watch can be configured from the MSBuild project file being watched. The [dotnet-watch ReadMe](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md) contains information on dotnet-watch not covered in this tutorial.
+[dotnet-watch ReadMe 文件](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md)的 [MSBuild 节](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md#msbuild)解释了 dotnet-watch 是如何从被监视的 MSBuild 项目文件中获得配置的。[dotnet-watch ReadMe 文件](https://github.com/aspnet/DotNetTools/blob/dev/src/Microsoft.DotNet.Watcher.Tools/README.md) 所包含的 dotnet-watch 信息并不涵盖本教程。
